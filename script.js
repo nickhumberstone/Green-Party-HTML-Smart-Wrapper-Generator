@@ -9,6 +9,7 @@ function createHeaderAndFooter(){
     var whatsappURL = document.getElementsByName("whatsappURL")[0].value;
 
     //HEADER HTML OUTPUT (includes Local Party name)
+    //used freeformatter.coms html escape / un-escaper to fix this code
     document.getElementById("outputHeader").innerHTML =
     "&lt;style&gt; body{color: #333333;font-family: Helvetica, sans-serif; font-size: 14px;line-height: 150%;text-align: left;padding: 20px 20px 0px; max-width:800px;margin:0 auto;} h1 {background-color: #f04e98;color:white;padding:10px;text-align:center;line-height:1.6;} h2 {background-color: #6ab023;color:white;padding:5px;text-align:center;} a {color: #6AB023;} strong {color: #6AB023;} hr {border: 1px solid #cccccc;}tr{border-bottom:1px,solid,#ddd} &lt;/style&gt; &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;margin:0px;&quot;&gt; &lt;tr style=&quot;background-color: #6AB023;&quot;&gt; &lt;td valign=&quot;middle&quot; style=&quot;margin:auto auto&quot;&gt; &lt;div style=&quot;width:100%;text-align:center&quot;&gt; &lt;center&gt; &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; style=&quot;margin:0px;&quot;&gt; &lt;tr&gt; &lt;td valign=&quot;middle&quot;&gt; &lt;div style=&quot;color:#FFFFFF;font-size: 30px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;margin-left:20px;&quot;&gt;"
     + localParty 

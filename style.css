@@ -1,0 +1,31 @@
+body{
+    font-family:sans-serif;
+    width:60%;
+    margin:auto;
+}
+
+form{
+    display:flex;
+    width:100%;
+    flex:1 1 100%;
+    border:5px solid goldenrod;
+}
+
+li {
+    display:flex;
+    padding:10px;
+    text-align:right;
+}
+
+li>input{
+    flex:1;
+}
+
+li>label{
+    flex:1;
+    align-self:center;
+}
+
+ul {
+    list-style-type:none;
+}

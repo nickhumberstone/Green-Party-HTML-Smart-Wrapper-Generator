@@ -8,28 +8,31 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<form>
-<!-- used freeformatter.coms html escape / unescaper to fix this code -->
     <h1>Green Party Email Wrapper Generator</h1>
     <p>Fill in the relevant fields below, then click 'Generate'. If you leave any of the social fields empty, it will not include them in the final HTML output</p>
-    Local Party name (without 'Green Party'): <input type="text" name="localParty" /><br><br>
+    
+    <form>
+    <ul>
+        <li><label for="localParty">Local Party name (without 'Green Party'):</label><input type="text" name="localParty" /><br><br></li>
 
-    Website URL: <input type="text" name="websiteURL" /><br><br>
+        <li><label for="websiteURL">Website URL:</label> <input type="text" name="websiteURL" /><br><br></li>
 
-    Imprint Text (Including 'Published and Promoted by:'): <input type="text" name="imprintText" /><br><br> 
+        <li> <label for="websiteURL">Imprint Text (Including 'Published and Promoted by:'):</label> <input type="text" name="imprintText" /><br><br></li> 
 
-    Facebook URL: <input type="text" name="facebookURL" /><br><br>
+        <li><label for="websiteURL">Facebook URL:</label> <input type="text" name="facebookURL" /><br><br></li>
 
-    Twitter URL: <input type="text" name="twitterURL" /><br><br>
+        <li><label for="websiteURL">Twitter URL:</label> <input type="text" name="twitterURL" /><br><br></li>
 
-    Instagram URL: <input type="text" name="instagramURL" /><br><br>
+        <li><label for="websiteURL">Instagram URL:</label> <input type="text" name="instagramURL" /><br><br></li>
 
-    YouTube URL: <input type="text" name="youtubeURL" /><br><br>
+        <li><label for="websiteURL">YouTube URL:</label> <input type="text" name="youtubeURL" /><br><br></li>
 
-    WhatsApp group invite link URL: <input type="text" name="whatsappURL" /><br><br>
+        <li><label for="websiteURL">WhatsApp group invite link URL:</label> <input type="text" name="whatsappURL" /><br><br></li>
 
+    </ul>
+</form>
     <p style = "background-color: aqua;padding:10px;width:auto;" onclick="return createHeaderAndFooter()">CLICK ME TO SUBMIT</p>
-    </form>
+    
 
     <p id="outputHeader"></p>
 
