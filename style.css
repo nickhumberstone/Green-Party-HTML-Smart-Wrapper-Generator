@@ -1,7 +1,13 @@
 body{
+    background-color: beige;
+}
+
+main{
     font-family:sans-serif;
     width:60%;
     margin:auto;
+    padding:10px;
+    background-color:#ffffff;
 }
 
 form{
@@ -28,4 +34,15 @@ li>label{
 
 ul {
     list-style-type:none;
+}
+
+#previewWindow{
+    min-height:200px;
+    border: 5px solid red;
+}
+
+.outputToCopy{
+    height:120px;
+    overflow:scroll;
+    border:1px solid green;
 }
