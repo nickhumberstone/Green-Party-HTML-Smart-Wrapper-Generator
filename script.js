@@ -3,7 +3,7 @@
 //Make button trigger multiple functions in order
 buttonPress.addEventListener("click", function(){
     createHeaderAndFooter();
-    createPreview();
+    //createPreview();
 });
 
 async function copyFooter(){
@@ -121,46 +121,49 @@ outputFooter.innerHTML += "&lt;/div&gt";
 
 //FOOTER HTML OUTPUT (includes Local Party name, URL links (with if statements to check if blank) and imprint information)
 footerHTML =
-    ''
-
+    '</div> <!--[if mso]> </td> </tr> </table> </center> <![endif]--></td></tr><tr style="background: #6ab023"><td valign="middle"><div style="width:100%;text-align:center"><center><table border="0" cellpadding="0" cellspacing="0" style="margin:0px;padding:10px 0"><tr><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;margin-left:20px;">'
     + localParty
-
-    + '';
+    + '</div></td><td valign="middle" style="font-size: 0"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/075/051/original/GPEW-nostrap-wt_(1)_logoonly.png" style="width:40px; margin:5px" /></td><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;">Green Party</div></td></tr></table><div style="background-color:#6ab023;margin-top:-10px;"><div>';
 
 //If any of the social media fields are empty, don't include the additional HTML, otherwise include an image of the relevant social media, with a link
-if (facebookURL != "") {outputFooter.innerHTML +=""
-+facebookURL+
-""
-};
+if (facebookURL != "") {outputFooter.innerHTML += facebookURL};
 
-if (twitterURL != "") {outputFooter.innerHTML +=""+twitterURL+""};
+if (twitterURL != "") {outputFooter.innerHTML += twitterURL};
 
-if (instagramURL != "") {outputFooter.innerHTML +=""+instagramURL+""};
+if (instagramURL != "") {outputFooter.innerHTML += instagramURL};
 
-if (youtubeURL != "") {outputFooter.innerHTML +=""+youtubeURL+""};
+if (youtubeURL != "") {outputFooter.innerHTML += youtubeURL};
 
-if (whatsappURL != "") {outputFooter.innerHTML +=""+whatsappURL+""};
+if (whatsappURL != "") {outputFooter.innerHTML += whatsappURL};
 
 //Add general footer content, inserting the website URL and local party name for 'Learn more about X local party here' link to website
 outputFooter.innerHTML +=
-    ""+websiteURL+""+localParty+"";
+    '</div><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;"><a style="color:#FFFFFF" href="'+websiteURL+
+    '">Find out more about '
+    +localParty+
+    ' Green Party here</a><br><br>Not a member? <a style="color:#FFFFFF" href="https://join.greenparty.org.uk/">You can join today!</a><br><br></div></div><div style="background: #FFFFFF;color: #333333;font-family: Arial,sans-serif;font-size: 10px;line-height: 125%;text-align: left;padding:5px"> You received this email because you signed up to our mailing list on our website, took a campaign action, gave us your address at an event or because you&#8217;re a member of the Green Party. ';
     
 //If imprintText is blank, use default imprint, else use the inputted text
 if (imprintText != "") {outputFooter.innerHTML += imprintText;
 } else {
-    outputFooter.innerHTML +="";}
+    outputFooter.innerHTML +='Published and promoted by Chris Rose on behalf of the Green Party, both at The Biscuit Factory, Unit 215 J Block, 100 Clements Road, London, SE16 4DG.';}
 
 //Add closing tag as escaped HTML
-outputFooter.innerHTML += "";
+outputFooter.innerHTML += '</div>';
 
 
 //make header add to innerhtml
 document.getElementById("outputHeader").innerHTML = headerHTML;
+
+//make header add to innerhtml
+document.getElementById("outputFooter").innerHTML = footerHTML;
+
 //close function 
 };
 
+//Future Feature: Preview section showing the example of the output (as it would display in an email)
 //This function needs non escaped HTML copied/input
-function createPreview(){
+/*function createPreview(){
     document.getElementById("previewWindow").innerHTML = headerHTML.replace('<style>body{color: #333333;font-family: Helvetica, sans-serif;font-size: 14px;line-height: 150%;text-align: left;padding: 20px 20px 0px; max-width:800px;margin:0 auto;}    h1 {background-color: #f04e98;color:white;padding:10px;text-align:center;line-height:1.6;}     h2 {background-color: #6ab023;color:white;padding:5px;text-align:center;}  a {color: #6AB023;}strong {color: #6AB023;} hr {border: 1px solid #cccccc;}tr{border-bottom:1px,solid,#ddd}</style> ','')
    //Generic text to show how headings, subheadings, paragraphs, and links will display
    + "<h1>Main Heading</h1>"
@@ -174,4 +177,4 @@ function createPreview(){
 function unescapeHTML(str){
    var doc = new DOMParser().parseFromString(str, "text/html");
    return doc.documentElement.textContent;
-}
+}*/
