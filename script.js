@@ -3,7 +3,7 @@
 //Make button trigger multiple functions in order
 buttonPress.addEventListener("click", function(){
     createHeaderAndFooter();
-    createPreview();
+    //createPreview();
 });
 
 async function copyFooter(){
@@ -115,7 +115,7 @@ outputFooter.innerHTML += "";
 document.getElementById("outputHeader").innerHTML = headerHTML;
 //close function 
 };
-
+/*
 //This function needs non escaped HTML copied/input
 function createPreview(){
     document.getElementById("previewWindow").innerHTML = headerHTML.replace('<style>body{color: #333333;font-family: Helvetica, sans-serif;font-size: 14px;line-height: 150%;text-align: left;padding: 20px 20px 0px; max-width:800px;margin:0 auto;}    h1 {background-color: #f04e98;color:white;padding:10px;text-align:center;line-height:1.6;}     h2 {background-color: #6ab023;color:white;padding:5px;text-align:center;}  a {color: #6AB023;}strong {color: #6AB023;} hr {border: 1px solid #cccccc;}tr{border-bottom:1px,solid,#ddd}</style> ','')
@@ -133,7 +133,7 @@ function unescapeHTML(str){
    return doc.documentElement.textContent;
 }
 
-
+*/
 
 
 
