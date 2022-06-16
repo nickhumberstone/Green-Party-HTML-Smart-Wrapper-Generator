@@ -10,11 +10,11 @@
 <body>
     <main>
         <section id="introductionText">
-    <h1>Green Party Email Wrapper Generator</h1>
-    <p>Action Network uses HTML wrappers when it sends emails. This comes in two parts, a header and as footer.</p>
-    <p>Fill in the relevant fields below, then click 'Generate'. If you leave any of the social fields empty, it will not include them in the final HTML output</p>
-    <p>Open up <a href="https://actionnetwork.org.uk/email_wrappers">Action Network Email Wrapper Settings</a> and then copy and paste each of the outputs from this form. The first is the header, that should go in the header HTML section on Action Network. The second output is the footer HTML.</p>
-    <p>To make the best use of this wrapper, see <a href="https://support.greenparty.org.uk/helpcentre/article"> How to use the provided Email Wrapper</a></p>
+        <h1>Green Party Email Wrapper Generator</h1>
+        <p>Action Network uses HTML wrappers when it sends emails. This comes in two parts, a header and as footer.</p>
+        <p>Fill in the relevant fields below, then click 'Generate'. If you leave any of the social fields empty, it will not include them in the final HTML output</p>
+        <p>Open up <a href="https://actionnetwork.org.uk/email_wrappers">Action Network Email Wrapper Settings</a> and then copy and paste each of the outputs from this form. The first is the header, that should go in the header HTML section on Action Network. The second output is the footer HTML.</p>
+        <p>To make the best use of this wrapper, see <a href="https://support.greenparty.org.uk/helpcentre/article"> How to use the provided Email Wrapper</a></p>
     </section>
     <section id="wrapperForm">
     <form>
@@ -23,21 +23,21 @@
 
         <li> <label for="imprintText">Imprint Text</label> <input type="text" placeholder="Published and Promoted by..." name="imprintText" /><br><br></li> 
 
-        <li><label for="websiteURL">Website URL:</label> <input type="text" name="websiteURL" /><br><br></li>
+        <li><label for="websiteURL">Website URL:</label> <input type="URL" name="websiteURL" /><br><br></li>
 
-        <li><label for="facebookURL">Facebook URL:</label> <input type="text" placeholder="https://" name="facebookURL" /><br><br></li>
+        <li><label for="facebookURL">Facebook URL:</label> <input type="URL" placeholder="https://" name="facebookURL" /><br><br></li>
 
-        <li><label for="twitterURL">Twitter URL:</label> <input type="text" name="twitterURL" /><br><br></li>
+        <li><label for="twitterURL">Twitter URL:</label> <input type="URL" name="twitterURL" /><br><br></li>
 
-        <li><label for="instagramURL">Instagram URL:</label> <input type="text" name="instagramURL" /><br><br></li>
+        <li><label for="instagramURL">Instagram URL:</label> <input type="URL" name="instagramURL" /><br><br></li>
 
-        <li><label for="youtubeURL">YouTube URL:</label> <input type="text" name="youtubeURL" /><br><br></li>
+        <li><label for="youtubeURL">YouTube URL:</label> <input type="URL" name="youtubeURL" /><br><br></li>
 
-        <li><label for="whatsappURL">WhatsApp group invite link URL:</label> <input type="text" name="whatsappURL" /><br><br></li>
+        <li><label for="whatsappURL">WhatsApp group invite link URL:</label> <input type="URL" name="whatsappURL" /><br><br></li>
 
     </ul>
 </form>
-<button id="buttonPress" sytle="padding:10px;margin:10px;width:auto;"  >Generate Header Wrapper and Footer Wrapper</button> 
+<button id="generateButton" style="padding:10px;margin:10px;width:auto;"  >Generate Header Wrapper and Footer Wrapper</button> 
 </section>
 <!-- Future feature: Preview Section showing the example of the output
     <section id="preview">
@@ -47,11 +47,11 @@
 <section id="outputForm">
     <h2>The HTML Output will generate here</h2>
     <h3>Header HTML</h3>
-    <textarea id="outputHeader" class="outputToCopy" readonly></textarea>
-    <button id="copyButton" sytle="padding:10px;margin:10px;width:auto;"  >Click to copy Header HTML</button> 
+    <textarea id="headerHTMLBox" readonly></textarea>
+    <button id="copyHeaderButton" style="padding:10px;margin:10px;width:auto;"  >Click to copy Header HTML</button> 
     <h3>Footer HTML</h3>
-    <textarea id="outputFooter" class="outputToCopy" readonly></textarea>
-    <button onclick="copyFooter()" id="copyFooter" sytle="padding:10px;margin:10px;width:auto;"  >Click to copy Footer HTML</button> 
+    <textarea id="footerHTMLBox" readonly></textarea>
+    <button id="copyFooterButton" style="padding:10px;margin:10px;width:auto;"  >Click to copy Footer HTML</button> 
 
 </section>
 <section id="contact">
