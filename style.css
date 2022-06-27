@@ -1,10 +1,10 @@
 body{
-    background-color: beige;
+    background-color: #6ab023;
 }
 
 main{
     font-family:sans-serif;
-    width:60%;
+    max-width:600px;
     margin:auto;
     padding:10px;
     background-color:#ffffff;
@@ -14,7 +14,7 @@ form{
     display:flex;
     width:100%;
     flex:1 1 100%;
-    border:5px solid goldenrod;
+    border:5px solid rgb(0, 0, 0);
 }
 
 li {
@@ -24,7 +24,7 @@ li {
 }
 
 li>input{
-    flex:1;
+    flex:2;
 }
 
 li>label{
@@ -36,9 +36,8 @@ ul {
     list-style-type:none;
 }
 
-#previewWindow{
-    min-height:200px;
-    border: 5px solid red;
+button{
+    font-size:20px;
 }
 
 .outputToCopy{
