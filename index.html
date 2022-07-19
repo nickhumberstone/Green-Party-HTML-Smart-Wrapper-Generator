@@ -13,8 +13,14 @@
         <h1>Green Party Email Wrapper Generator V1.0</h1>
         <p>Action Network uses HTML wrappers when it sends emails. This comes in two parts, a header and as footer.</p>
         <p>Fill in the relevant fields below, then click 'Generate Header Wrapper and Footer Wrapper'. If you leave any of the social fields empty, it will not include them in the final HTML output. If you leave the imprint field blank, it will use the standard GPEW imprint.</p>
-        <p>The full support article on how to use this tool is here:<a href="https://support.greenparty.org.uk/portal/en_gb/kb/articles/creating-a-new-page-wrapper-using-the-new-tool"> How to use the provided Email Wrapper</a></p>
+        <p>The header and footer has some in-built styles for different pieces of content in an email. Depending on the format you choose for a selection of text, the email will display like so:</p>
+        <h1 style="background-color: #f40e98;color:white;padding:10px;text-align:center;line-height:1.6;">Heading 1</h1>
+        <h2 style="background-color: #6ab023;color:white;padding:5px;text-align:center;"">Heading 2</h2>
+        <p style="text-align:center;"><a style="color:#6ab023;" href="#">Links</a></p>
+        <p style="text-align:center;"><strong style="color:#6ab023;text-align:center;";>Bold text</strong></p>
+        <p>The full support article on how to use this tool is here: <a href="https://support.greenparty.org.uk/portal/en_gb/kb/articles/creating-a-new-page-wrapper-using-the-new-tool">How to use the provided Email Wrapper</a></p>
     </section>
+    <hr>
     <section id="wrapperForm">
     <form>
     <ul>
@@ -36,8 +42,9 @@
 
     </ul>
 </form>
-<button id="generateButton" style="padding:10px;margin:10px;width:auto;"  >Generate Header Wrapper and Footer Wrapper</button> 
+<p style="margin-top:0px; text-align:center;"><button id="generateButton" style="padding:10px;margin:10px;width:auto;"  >Generate Header Wrapper and Footer Wrapper</button></p>
 </section>
+<hr>
 <!-- Future feature: Preview Section showing the example of the output
     <section id="preview">
     <div id="previewWindow"></div>
@@ -53,6 +60,7 @@
     <button id="copyFooterButton" style="padding:10px;margin:10px;width:auto;"  >Click to copy Footer HTML</button> 
 
 </section>
+<hr>
 <footer>
     <p>This tool was created by Nick Humberstone.</p>
     <p>If there is a problem, or you have a feature suggestion, please contact Nick on <a href="mailto:nickhumberstone@gmail.com">nickhumberstone@gmail.com</a></p>
