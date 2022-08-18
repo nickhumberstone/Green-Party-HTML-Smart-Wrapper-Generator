@@ -81,7 +81,7 @@ footerHTML =
 
     + localParty
 
-    + '</div></td><td valign="middle" style="font-size: 0"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/075/051/original/GPEW-nostrap-wt_(1)_logoonly.png" style="width:40px; margin:5px" /></td><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;">Green Party</div></td></tr></table><div style="background-color:#6ab023;margin-top:-10px;"><div>';
+    + '</div></td><td valign="middle" style="font-size: 0"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/075/051/original/GPEW-nostrap-wt_(1)_logoonly.png" style="max-width:40px; margin:5px" /></td><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;">Green Party</div></td></tr></table><div style="background-color:#6ab023;margin-top:-10px;"><div>';
 
 //If any of the social media fields are empty, don't include the additional HTML, otherwise include an image of the relevant social media, with a link
 if (facebookURL != "") {footerHTML +='<a href="'
