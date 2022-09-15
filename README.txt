@@ -1,6 +1,8 @@
 README
 
 NOTES
+Copy buttons no longer working - what is the best available method to do this?
+
 Add validation to check if URL or not
 Add copy buttons
 Add preview window of what it will look like
