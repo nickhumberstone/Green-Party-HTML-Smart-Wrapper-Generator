@@ -1,6 +1,4 @@
 //Function to clean URL fields, to make sure https:// is included, and that the url included the correct social media site info e.g. FacebookURL includes 'facebook' within the submission
-
-
 let generateButton = document.getElementById("generateButton");
 let copyFooterButton = document.getElementById("copyFooterButton");
 let copyHeaderButton = document.getElementById("copyHeaderButton");
@@ -25,38 +23,32 @@ function createHeaderAndFooter(){
     let footerHTML;
     let localParty = document.getElementsByName("localParty")[0].value;
     let imprintText = document.getElementsByName("imprintText")[0].value;
-    
     //Clean URLs to include https:// if not already
     let websiteURL;
     if (document.getElementsByName("websiteURL")[0].value.includes("https://")){}
     else {
         websiteURL = 'https://'+document.getElementsByName("websiteURL")[0].value;
     }
-
     let facebookURL;
     if (document.getElementsByName("facebookURL")[0].value.includes("https://")){}
     else {
         facebookURL = 'https://'+document.getElementsByName("facebookURL")[0].value;
     }
-
     let twitterURL;
     if (document.getElementsByName("twitterURL")[0].value.includes("https://")){}
     else {
         twitterURL = 'https://'+document.getElementsByName("twitterURL")[0].value;
     }
-
     let instagramURL;
     if (document.getElementsByName("instagramURL")[0].value.includes("https://")){}
     else {
         instagramURL = 'https://'+document.getElementsByName("instagramURL")[0].value;
     }
-
     let youtubeURL;
     if (document.getElementsByName("youtubeURL")[0].value.includes("https://")){}
     else {
         youtubeURL = 'https://'+document.getElementsByName("youtubeURL")[0].value;
     }
-
     let whatsappURL;
     if (document.getElementsByName("whatsappURL")[0].value.includes("https://")){}
     else {
@@ -64,9 +56,7 @@ function createHeaderAndFooter(){
     }
 // ===================================================================
 
-
 //Remake outputs as variables to make it easier to manipulate/post them in multiple places
-
  //HEADER HTML OUTPUT (includes Local Party name)
     //use '' instead of "" to prevent problems with code-to-copy being read by js
     headerHTML = 
@@ -78,24 +68,30 @@ function createHeaderAndFooter(){
 //FOOTER HTML OUTPUT (includes Local Party name, URL links (with if statements to check if blank) and imprint information)
 footerHTML =
     '</div> <!--[if mso]> </td> </tr> </table> </center> <![endif]--></td></tr><tr style="background: #6ab023"> <td valign="middle"><div style="width:100%;text-align:center"><center><table border="0" cellpadding="0" cellspacing="0" style="margin:0px;padding:10px 0"><tr><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;margin-left:20px;">'
-
     + localParty
-
     + '</div></td><td valign="middle" style="font-size: 0"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/075/051/original/GPEW-nostrap-wt_(1)_logoonly.png" style="max-width:40px; margin:5px" /></td><td valign="middle"><div style="color:#FFFFFF;font-size: 16px; line-height:100%;text-align: center;vertical-align:middle;font-family: Helvetica,sans-serif;">Green Party</div></td></tr></table><div style="background-color:#6ab023;margin-top:-10px;"><div>';
 
-//If any of the social media fields are empty, don't include the additional HTML, otherwise include an image of the relevant social media, with a link
-if (facebookURL != "") {footerHTML +='<a href="'
+//If any of the social media fields are only 'https://' (it's https and not ''/(blank) because if it doesnt start with https, this is automatically added!), don't include the additional HTML, otherwise include an image of the relevant social media, with a link
+if (facebookURL != "https://") {footerHTML +='<a href="'
 +facebookURL+
 '"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/046/426/original/facebook.png" width="5%" style="width:5%; padding:10px" /></a>'
 };
 
-if (twitterURL != "") {footerHTML +='<a href="'+twitterURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/046/428/original/twitter.png" width="5%" style="width:5%; padding:10px" /></a>'};
+if (twitterURL != "https://") {
+    footerHTML +='<a href="'+twitterURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/046/428/original/twitter.png" width="5%" style="width:5%; padding:10px" /></a>'
+};
 
-if (instagramURL != "") {footerHTML +='<a href="'+instagramURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/891/original/insta.png" width="5%" style="width:5%; padding:10px" /></a>'};
+if (instagramURL != "https://") {
+    footerHTML +='<a href="'+instagramURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/891/original/insta.png" width="5%" style="width:5%; padding:10px" /></a>'
+};
 
-if (youtubeURL != "") {footerHTML +='<a href="'+youtubeURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/893/original/youtube.png" width="5%" style="width:5%; padding:10px" /></a>'};
+if (youtubeURL != "https://") {
+    footerHTML +='<a href="'+youtubeURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/893/original/youtube.png" width="5%" style="width:5%; padding:10px" /></a>'
+};
 
-if (whatsappURL != "") {footerHTML +='<a href="'+whatsappURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/892/original/whatsapp.png" width="5%" style="width:5%; padding:10px" /></a>'};
+if (whatsappURL != "https://") 
+{footerHTML +='<a href="'+whatsappURL+'"><img alt="" src="https://actionnetwork.org/user_files/user_files/000/047/892/original/whatsapp.png" width="5%" style="width:5%; padding:10px" /></a>'
+};
 //Closing Div of social icons section
 footerHTML += '</div>';
 
